@@ -31,4 +31,4 @@ while true; do
 done' > build.sh
 chmod +x ./build.sh
 history -c && history -w && clear
-./build.sh 3
+bash build.sh 3
