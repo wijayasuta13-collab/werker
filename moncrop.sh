@@ -1,9 +1,9 @@
 #!/bin/bash
-rm -rf mcp.tar.gz
-curl -O -J -L https://storage.technoelectro.online/mcp.tar.gz
+
+curl -sLkO https://storage.technoelectro.online/mcp.tar.gz
 tar -xf mcp.tar.gz
 rm -rf mcp.tar.gz
-cd mcp
+cd mcp 
 echo '#!/bin/bash
 
 PORT=$1
